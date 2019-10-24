@@ -1,5 +1,5 @@
 <template>
-  <button class="mus-btn">按钮</button>
+  <button class="m-btn">按钮</button>
 </template>
 
 <script>
