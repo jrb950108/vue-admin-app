@@ -1,9 +1,11 @@
 import Button from './button'
 import SideMenu from './side-menu'
+import Affix from './affix'
 
 const components = [
   Button,
-  SideMenu
+  SideMenu,
+  Affix
 ]
 
 const install = function (Vue) {
@@ -14,7 +16,8 @@ const install = function (Vue) {
 
 export {
   Button,
-  SideMenu
+  SideMenu,
+  Affix
 }
 
 export default {
