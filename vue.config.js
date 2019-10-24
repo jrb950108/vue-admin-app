@@ -1,6 +1,11 @@
+const path = require('path')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const CDN_PREFIX = 'https://jrb-1256124247.cos.ap-shanghai.myqcloud.com/img/'
+
+function resolve (dir) {
+  return path.join(__dirname, dir)
+}
 
 module.exports = {
   // css: {
@@ -42,6 +47,23 @@ module.exports = {
     }
   },
   chainWebpack: config => {
+    // set svg-sprite-loader
+    config.module
+      .rule('svg')
+      .exclude.add(resolve('src/icons'))
+      .end()
+    config.module
+      .rule('icons')
+      .test(/\.svg$/)
+      .include.add(resolve('src/icons'))
+      .end()
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
+      .options({
+        symbolId: 'icon-[name]'
+      })
+      .end()
+
     config
       .module
       .rule('images')

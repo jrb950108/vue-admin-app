@@ -34,6 +34,7 @@
     "mockjs": "^1.0.1-beta3",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "svg-sprite-loader": "^4.1.6",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "vue-template-compiler": "^2.6.10"
   },
