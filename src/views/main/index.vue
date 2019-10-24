@@ -13,28 +13,6 @@
         <keep-alive>
           <router-view />
         </keep-alive>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
       </el-main>
     </el-container>
   </el-container>

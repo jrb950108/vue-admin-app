@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie'
 
-export const TOKEN_KEY = 'authToken'
+export const TOKEN_KEY = 'token'
 
 export const LOCALE_KEY = 'locale'
 
