@@ -1,5 +1,5 @@
 const path = require('path')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const CDN_PREFIX = 'https://jrb-1256124247.cos.ap-shanghai.myqcloud.com/img/'
 
@@ -21,17 +21,22 @@ module.exports = {
     if (process.env.NODE_ENV === 'production') {
       // 为生产环境修改配置...
       return {
-        plugins: [
-          // 移除控制台语句
-          new UglifyJsPlugin({
-            uglifyOptions: {
-              warnings: false,
-              compress: {
-                drop_debugger: true,
-                drop_console: true
+        optimization: {
+          minimizer: [
+            // 移除控制台语句
+            new TerserPlugin({
+              terserOptions: {
+                warnings: false,
+                compress: {
+                  drop_console: true,
+                  drop_debugger: false,
+                  pure_funcs: ['console.log']
+                }
               }
-            }
-          }),
+            })
+          ]
+        },
+        plugins: [
           // 开启gzip压缩生成gz后缀的文件，服务端开启gzip支持后默认取gz文件输出
           new CompressionWebpackPlugin({
             test: /\.(js|css|svg)$/,
