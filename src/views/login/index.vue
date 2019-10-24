@@ -1,6 +1,10 @@
 <template>
   <div>
     <el-button type="primary" @click="login">登录</el-button>
+
+    <br/>
+
+    <img src="@/assets/cat.jpeg" />
   </div>
 </template>
 

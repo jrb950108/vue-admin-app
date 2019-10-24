@@ -1,5 +1,6 @@
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
+const CDN_PREFIX = 'https://jrb-1256124247.cos.ap-shanghai.myqcloud.com/img/'
 
 module.exports = {
   // css: {
@@ -39,5 +40,21 @@ module.exports = {
       // 为开发环境修改配置...
       return {}
     }
+  },
+  chainWebpack: config => {
+    config
+      .module
+      .rule('images')
+      .test(/\.(jpg|png|gif|jpeg)$/)
+      .use('url-loader')
+      .loader('url-loader')
+      .options({
+        limit: 8192,
+        // 根据环境使用cdn或相对路径
+        publicPath: process.env.NODE_ENV === 'production' ? CDN_PREFIX : '/img',
+        outputPath: 'img',
+        name: '[name].[hash:8].[ext]'
+      })
+      .end()
   }
 }
