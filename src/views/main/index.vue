@@ -8,33 +8,11 @@
 
     <el-container style="min-height: calc(100vh - 66px);">
       <side-menu :data="sideMenu"></side-menu>
-
+      <m-icon icon-class="avatar"></m-icon>
       <el-main class="main-container">
         <keep-alive>
           <router-view />
         </keep-alive>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
-        <p>pp</p>
       </el-main>
     </el-container>
   </el-container>

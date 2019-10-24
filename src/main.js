@@ -9,6 +9,7 @@ import './element-ui.js'
 import './styles/element-variables.scss'
 import './styles/index.scss'
 import Musd from './components'
+import './icons'
 
 if (process.env.NODE_ENV === 'development') {
   require('./mock')
