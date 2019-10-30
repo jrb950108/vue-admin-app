@@ -121,9 +121,9 @@ npm run svgo
 
 无用的信息都被处理掉了。
 
-更多详细的配置 可以在 `/scr/icons/svgo.yml` 中进行配置。
-
 ![](https://wpimg.wallstcn.com/006c4bb5-b2d1-447d-a1c9-a912cf5dee47.jpg)
+
+更多详细的配置 可以在 `/scr/icons/svgo.yml` 中进行配置。
 
 ## Customize configuration
 
