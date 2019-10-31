@@ -5,6 +5,12 @@
     <br/>
 
     <img src="@/assets/cat.jpeg" />
+
+    <br/>
+
+    <el-button v-waves type="primary">
+      水波纹效果
+    </el-button>
   </div>
 </template>
 
