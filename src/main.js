@@ -10,6 +10,7 @@ import './styles/element-variables.scss'
 import './styles/index.scss'
 import Musd from './components'
 import './icons'
+import importDirective from './directive'
 
 if (process.env.NODE_ENV === 'development') {
   require('./mock')
@@ -18,6 +19,11 @@ if (process.env.NODE_ENV === 'development') {
 Vue.config.productionTip = false
 
 Vue.use(Musd)
+
+/**
+ * 注册指令
+ */
+importDirective(Vue)
 
 new Vue({
   router,
