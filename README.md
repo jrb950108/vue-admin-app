@@ -67,7 +67,7 @@ npm run lint
 background: url('~@/assets/logo.png')
 ```
 
-js模块引入
+js 模块引入
 
 ```
 import { getToken } from '@/lib/util'
