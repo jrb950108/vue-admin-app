@@ -56,7 +56,7 @@ npm run lint
 
 为了防止相对路径过深，使用别名方式便捷引入文件、静态资源等
 
-`@` 是 webpack 的 [alias](https://webpack.js.org/configuration/resolve/#resolve-alias) 不懂得请自行研究
+`@` 是 webpack 的 [alias](https://webpack.js.org/configuration/resolve/#resolve-alias)
 
 图片路径引入
 
